@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện chuột</title>
+</head>
+
+<body>
+    <!-- Cách 1: Gắn sự kiện vào button -->
+    <button onmousedown="handleMouseDown()" onmouseup="handleMouseUp()">MouseDown/MouseUp</button>
+    <!-- Cách 2: Sử dụng addEventListener -->
+    <button id="btnOverOut">MouseOver/MouseOut</button>
+    <!-- Cách 3: Gắn sự kiện vào element -->
+    <button id="btnClick">Click here</button>
+    <script>
+        function handleMouseDown() {
+            alert("Bạn vừa click chuột xuống button");
+        }
+        function handleMouseUp() {
+            alert("Bạn vừa thả chuột ra khỏi button")
+        }
+        // Cách 2:
+        // Bước 1: truy cập vào phần tử cần gắn sự kiện
+        let btnOverOut = document.getElementById("btnOverOut");
+        // Bước 2: Gắn sự kiện vào phần tử (addEventListerer) và xử lý sự kiện
+        btnOverOut.addEventListener("mouseover", function () {
+            // Hàm xử lý cho sự kiên mouseover
+            alert("Bạn vừa di chuyển chuột vào button");
+        });
+        btnOverOut.addEventListener("mouseout", function () {
+            alert("Bạn vừa di chuyển chuột ra khỏi button");
+        });
+        // Cách 3: gắn sự kiện vào element
+        // Bước 1: truy cập vào phần tử cần gắn sự kiện
+        let btnClick = document.getElementById("btnClick");
+        // Bước 2: gắn sự kiện
+        btnClick.onclick = function () {
+            // Hàm xử lý sự kiện click
+            alert("Bạn vừa click vào button");
+        };
+        btnClick.ondblclick = function () {
+            alert("Bạn vừa click double vào button");
+        }
+    </script>
+</body>
+
+</html>

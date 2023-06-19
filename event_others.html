@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện Change và Input</title>
+</head>
+
+<body>
+    <input type="text" name="studentName" id="studentName" placeholder="Nhập vào tên sinh viên" /><br>
+    <input type="text" name="age" id="age" placeholder="Nhập vào tuổi sinh viên" />
+    <script>
+        let inputStudentName = document.getElementById("studentName");
+        inputStudentName.addEventListener("change", function () {
+            console.log("Giá trị vừa nhập-->", inputStudentName.value);
+        });
+        let inputAge = document.getElementById("age");
+        inputAge.addEventListener("input", function () {
+            console.log("Tuổi vừa nhập-->", inputAge.value);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập DOM</title>
+</head>
+
+<body>
+    <script>
+        // 1. Tạo ra 2 div - form & table
+        //1.1. Tạo div - form
+        let divForm = document.createElement("div");
+        divForm.setAttribute("class", "form");
+        // 1.2. Tạo div - table
+        let divTable = document.createElement("div");
+        divTable.setAttribute("class", "table");
+        // 2. Truy cập đến phần tử body để add các div - form & table
+        document.body.appendChild(divForm);
+        document.body.appendChild(divTable);
+        // 3. Tạo thẻ h2 có nội dung là Thông tin học viên và add vào divForm
+        let h2Form = document.createElement("h2");
+        h2Form.textContent = "Thông tin học viên";
+        divForm.appendChild(h2Form);
+        // 4. Tạo form đăng ký học viên và add vào divForm
+        let form = document.createElement("form");
+        form.setAttribute("action", "#");
+        divForm.appendChild(form);
+        // 5. Tạo ô nhập họ và tên và add vào form
+        let lableFullName = document.createElement("label");
+        lableFullName.setAttribute("for", "fullName");
+        lableFullName.innerText = "Họ và tên";
+        let inputFullName = document.createElement("input");
+        inputFullName.setAttribute("type", "text");
+        inputFullName.setAttribute("id", "fullName");
+        inputFullName.setAttribute("placeholder", "Vui lòng nhập tên");
+        form.appendChild(lableFullName);
+        form.appendChild(inputFullName);
+        form.innerHTML += "<br/>";
+        // 6. Tạo ô nhập email và add vào form
+        let lableEmail = document.createElement("label");
+        lableEmail.setAttribute("for", "email");
+        lableEmail.innerText = "Email";
+        let inputEmail = document.createElement("input");
+        inputEmail.setAttribute("type", "text");
+        inputEmail.setAttribute("id", "email");
+        inputEmail.setAttribute("placeholder", "Vui lòng nhập email");
+        form.appendChild(lableEmail);
+        form.appendChild(inputEmail);
+        form.innerHTML += "<br/>";
+        // 7. Tạo ô nhập email và add vào form
+        let lablePhone = document.createElement("label");
+        lablePhone.setAttribute("for", "phone");
+        lablePhone.innerText = "Số điện thoại";
+        let inputPhone = document.createElement("input");
+        inputPhone.setAttribute("type", "text");
+        inputPhone.setAttribute("id", "phone");
+        inputPhone.setAttribute("placeholder", "Vui lòng nhập số điện thoại");
+        form.appendChild(lablePhone);
+        form.appendChild(inputPhone);
+        form.innerHTML += "<br/>";
+        // 8. Tạo ô nhập quê quán và add vào form
+        let lablePlace = document.createElement("label");
+        lablePlace.setAttribute("for", "place");
+        lablePlace.innerText = "Quê quán";
+        let inputPlace = document.createElement("input");
+        inputPlace.setAttribute("type", "text");
+        inputPlace.setAttribute("id", "place");
+        inputPlace.setAttribute("placeholder", "Vui lòng nhập quê quán");
+        form.appendChild(lablePlace);
+        form.appendChild(inputPlace);
+        form.innerHTML += "<br/>";
+        // 9. Xây dựng radio giới thính và add vào form
+        let lableSex = document.createElement("lable");
+        lableSex.setAttribute("for", "sex");
+        lableSex.innerText = "Giới tính";
+        let inputRadioMale = document.createElement("input");
+        inputRadioMale.setAttribute("type", "radio");
+        inputRadioMale.setAttribute("id", "male");
+        inputRadioMale.setAttribute("name", "sex");
+        inputRadioMale.setAttribute("checked", "true");
+        let lableRadioMale = document.createElement("label");
+        lableRadioMale.setAttribute("for", "male");
+        lableRadioMale.innerText = "Nam";
+        let inputRadioFemale = document.createElement("input");
+        inputRadioFemale.setAttribute("type", "radio");
+        inputRadioFemale.setAttribute("id", "female");
+        inputRadioFemale.setAttribute("name", "sex");
+        let lableRadioFemale = document.createElement("label");
+        lableRadioFemale.setAttribute("for", "female");
+        lableRadioFemale.innerText = "Nữ";
+        form.appendChild(lableSex);
+        form.appendChild(inputRadioMale);
+        form.appendChild(lableRadioMale);
+        form.appendChild(inputRadioFemale);
+        form.appendChild(lableRadioFemale);
+        form.innerHTML += "<br/>";
+        // 10. tạo button submit và thêm vào form
+        let btnSubmit = document.createElement("input");
+        btnSubmit.setAttribute("type", "submit");
+        btnSubmit.setAttribute("value", "Lưu lại");
+        btnSubmit.style.display = "block";
+        btnSubmit.style.margin = "0 auto";
+        form.appendChild(btnSubmit);
+        divForm.style.border = "1px solid";
+        // 11. tạo table và add vào divTable
+        let table = document.createElement("table");
+        table.setAttribute("border", "1");
+        divTable.appendChild(table);
+        // 12. Tạo thẻ thead trong table và add vào table
+        let thead = document.createElement("thead");
+        table.appendChild(thead);
+        // 13.tạo tr cho tiêu đề table và add vào thead
+        let tr = document.createElement("tr");
+        thead.appendChild(tr);
+        // 14. tạo các th tiêu đề cho bảng và add vào tr
+        let thStt = document.createElement("th");
+        thStt.innerText = "#";
+        let thFullName = document.createElement("th");
+        thFullName.innerText = "Họ tên";
+        let thEmail = document.createElement("th");
+        thEmail.innerText = "Email";
+        tr.appendChild(thStt);
+        tr.appendChild(thFullName);
+        tr.appendChild(thEmail);
+
+    </script>
+</body>
+
+</html>
